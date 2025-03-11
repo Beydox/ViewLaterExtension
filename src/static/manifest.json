@@ -1,0 +1,27 @@
+{
+	"name": "Video link saver",
+	"manifest_version": 3,
+	"version": "1.0.0",
+	"description": "Save Youtube video links",
+	"icons": {
+		"48": "icon.png",
+		"128": "icon.png"
+	},
+	"permissions": ["storage"],
+	"background": {
+    "service_worker": "background.js",
+	"type": "module"
+	},
+	"content_scripts": [
+    {
+      "matches": ["https://*/*", "http://*/*"],
+      "js": ["contentScript.js"]
+    }
+	],
+    "action": {
+		"default_title": "Extension's popup",
+		"default_popup": "popup.html"
+	},
+	"options_page": "options.html"
+	
+}
