@@ -4,7 +4,7 @@ import { Card, CardContent, CardActions, Button, TextField } from "@mui/material
 import PopupMenu from "./PopupMenu";
 import { useParams } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
-import { getItemById } from "./db";
+import { getItemById, updateItem } from "./db";
 
 
 const Edit = () => {
@@ -12,6 +12,8 @@ const Edit = () => {
     const [note, setNote] = useState('')    
     const { id } = useParams();    
     const navigate = useNavigate();
+    const [message, setMessage] = useState("");
+
     
     //get item from db with item id
     const handleFetchItem = async (id: string) => {
@@ -40,6 +42,20 @@ const Edit = () => {
         navigate("/")
     }
 
+    const handleUpdate = async () => {
+        if (!id) {
+          return;
+        }
+    
+        try {
+          await updateItem(Number(id), { name: urlPath, value: note });
+          setMessage(`Запись с ID ${id} обновлена!`);
+        } catch (error) {
+          setMessage((error as Error).message);
+        }
+      };
+    
+
     return (
         <>
         <PopupMenu />
@@ -65,9 +81,10 @@ const Edit = () => {
                 />
                 </CardContent>
                 <CardActions>
-                    <Button size="small" onClick={handleSaveButton}>Save</Button>
+                    <Button size="small" onClick={handleUpdate}>Update</Button>
                 </CardActions>
             </Card>
+            <p>{message}</p>
         </>
     )
 }

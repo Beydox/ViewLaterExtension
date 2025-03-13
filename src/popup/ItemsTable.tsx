@@ -7,7 +7,6 @@ import TableBody from '@mui/material/TableBody';
 import TableCell from '@mui/material/TableCell';
 import TableContainer from '@mui/material/TableContainer';
 import TableRow from '@mui/material/TableRow';
-import Typography from '@mui/material/Typography';
 import Paper from '@mui/material/Paper';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
@@ -16,12 +15,11 @@ import EditIcon from '@mui/icons-material/Edit';
 import { useNavigate } from "react-router-dom";
 import { getItems, deleteItem } from "./db";
 import { useEffect, useState } from 'react';
-import { styled } from "@mui/material/styles";
 
 
 const style = {
-    width: 100,
-    maxWidth: 100,
+    width: 99,
+    maxWidth: 99,
     overflow: "hidden",
     textOverflow: "ellipsis",
     borderStyle: "border-box"
@@ -62,7 +60,7 @@ function Row(props: { row: rowProps; onRowsUpdate: () => void })  {
                 {open ? <KeyboardArrowUpIcon /> : <KeyboardArrowDownIcon />}
                 </IconButton>
             </TableCell>
-            <TableCell component="th" scope="row" style={style}>
+            <TableCell component="th" scope="row"  style={style}>
                 <pre>
                     {row.name}
                 </pre>
@@ -109,7 +107,7 @@ export default function CollapsibleTable()
         
     return (
         <TableContainer component={Paper}>
-            <Table aria-label="collapsible table" style={style}>
+            <Table aria-label="collapsible table" >
                 <TableBody>
                     {rows.map((row) => (
                     <Row key={row.id} row={row} onRowsUpdate={loadItems} />
