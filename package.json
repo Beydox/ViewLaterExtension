@@ -1,7 +1,7 @@
 {
-  "name": "react-ts-mui-ext-boilerplate",
+  "name": "react-ts-mui-chrome-extension",
   "version": "1.0.0",
-  "description": "Boilerplate for Chrome Extension with React TypeScript and MUI",
+  "description": "Chrome Extension on React TypeScript and MUI",
   "main": "index.js",
   "scripts": {
     "start": "webpack --watch --progress --config webpack.dev.js",

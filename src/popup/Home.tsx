@@ -8,8 +8,8 @@ const Home = () => {
     return (
         <>  
         <PopupMenu />
-        <Card variant="outlined" sx={{overflow: "hidden"}}>
-            <CardContent >            
+        <Card variant="outlined" sx={{overflow: "hidden", minHeight: "300px"}}>
+            <CardContent>            
             <CollapsibleTable/>
             </CardContent>
             <CardActions>             

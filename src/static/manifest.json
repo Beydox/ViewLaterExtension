@@ -1,8 +1,8 @@
 {
-	"name": "Video link saver",
+	"name": "ViewLater+",
 	"manifest_version": 3,
 	"version": "1.0.0",
-	"description": "Save Youtube video links",
+	"description": "Save and organize your favorite videos with notes. Easily keep track of what to watch next!",
 	"icons": {
 		"48": "icon.png",
 		"128": "icon.png"
@@ -19,7 +19,7 @@
     }
 	],
     "action": {
-		"default_title": "Extension's popup",
+		"default_title": "ViewLater+",
 		"default_popup": "popup.html"
 	},
 	"options_page": "options.html"

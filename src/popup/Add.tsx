@@ -1,6 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import { Card, CardContent, CardActions, Button, TextField } from "@mui/material";
+import SaveIcon from '@mui/icons-material/Save';
 import PopupMenu from "./PopupMenu";
 import { useParams } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
@@ -39,26 +40,32 @@ const Add = ()=> {
       <>
 
       <PopupMenu />
-        <Card sx={{ minWidth: 275 }}>
+        <Card sx={{ minWidth: 320 }}>
           <CardContent>
             <TextField 
               id="outlined-basic" 
               label="Outlined" variant="outlined" 
               value={urlPath}
               onChange={handleUrlInputChange} 
-              sx={{ mt: 2, width: 250 }} />
+              sx={{ mt: 2, width: 320 }} />
             <TextField
               id="outlined-multiline-static"
               label="Multiline"
               multiline
               rows={4}
-              sx={{ mt: 2, width: 250 }}
+              sx={{ mt: 2, width: 320 }}
               value={note}
               onChange={handleNoteInputChange} 
             />
           </CardContent>
           <CardActions>
-            <Button size="small" onClick={handleSaveButton}>Save</Button>
+            <Button size="medium" 
+              onClick={handleSaveButton} 
+              sx={{ mt: -1, bgcolor: "firebrick", ml: 1, mb: 1 }}
+              variant="contained" endIcon={<SaveIcon />}
+              >
+                Save
+              </Button>
           </CardActions>
         </Card>
         </>

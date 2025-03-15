@@ -6,21 +6,23 @@ import { HashRouter, Routes, Route } from "react-router-dom";
 import Add from './Add';
 import  Edit  from './Edit';
 import Layout from './Layout';
+import About from './About';
 
 
 const App = () => {
   return (
-    <div>
-      <Layout>
+    <>
+      <Layout >
       <HashRouter>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/add" element={<Add />} />
         <Route path="/edit/:id" element={<Edit />} />
+        <Route path="/about" element={<About />} />
       </Routes>
     </HashRouter>
     </Layout>
-    </div>
+    </>
   )
 }
 

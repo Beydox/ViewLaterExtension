@@ -36,12 +36,6 @@ const Edit = () => {
         setNote(e.target.value)
     }
     
-    const handleSaveButton = (e: React.MouseEvent<HTMLElement>) => {
-          //TODO: save variables value to database
-        console.log(`${urlPath} and content is ${note}`)
-        navigate("/")
-    }
-
     const handleUpdate = async () => {
         if (!id) {
           return;
@@ -59,7 +53,6 @@ const Edit = () => {
     return (
         <>
         <PopupMenu />
-            <h2>Element's id is {id}</h2>
             <Card sx={{ minWidth: 275 }}>
                 <CardContent>
                 <TextField 

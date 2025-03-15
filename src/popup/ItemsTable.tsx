@@ -15,6 +15,7 @@ import EditIcon from '@mui/icons-material/Edit';
 import { useNavigate } from "react-router-dom";
 import { getItems, deleteItem } from "./db";
 import { useEffect, useState } from 'react';
+import { Tooltip, Typography } from '@mui/material';
 
 
 const style = {
@@ -48,6 +49,10 @@ function Row(props: { row: rowProps; onRowsUpdate: () => void })  {
         props.onRowsUpdate();
     };
 
+    const handleLink = () => {
+        window.open(row.name)
+    }
+
     return (
     <React.Fragment>
         <TableRow sx={{ '& > *': { borderBottom: 'unset' } }} >
@@ -61,23 +66,33 @@ function Row(props: { row: rowProps; onRowsUpdate: () => void })  {
                 </IconButton>
             </TableCell>
             <TableCell component="th" scope="row"  style={style}>
-                <pre>
+            <Tooltip title={row.name}>
+                <Typography onClick={handleLink} sx={{
+                    "&:hover": {
+                        cursor: 'pointer'
+                    }
+                }} >
                     {row.name}
-                </pre>
+                </Typography>
+                </Tooltip>
             </TableCell>
             <TableCell align="right">
-                <IconButton onClick={() => handleEdit(row.id)}>
-                    <EditIcon />
-                </IconButton>
+                <Tooltip title="Edit">
+                    <IconButton onClick={() => handleEdit(row.id)}>
+                        <EditIcon />
+                    </IconButton>
+                </Tooltip>
             </TableCell>
             <TableCell align="right">
-                <IconButton onClick={()=> handleDelete(row.id)}>
-                    <DeleteIcon />
-                </IconButton>
+                <Tooltip title="Delete">
+                    <IconButton onClick={()=> handleDelete(row.id)}>
+                        <DeleteIcon />
+                    </IconButton>
+                </Tooltip>
             </TableCell>
         </TableRow>
         <TableRow>
-            <TableCell style={{ paddingBottom: 0, paddingTop: 0 }} colSpan={6}>
+            <TableCell style={style} sx={{p: 0}} colSpan={6}>
                 <Collapse in={open} timeout="auto" unmountOnExit>
                     <Box sx={{ margin: 1 }}>
                         <pre>
@@ -102,7 +117,7 @@ export default function CollapsibleTable()
     
     const loadItems = async () => {
         const storedItems = await getItems();
-        setRows(storedItems);
+        setRows(storedItems.reverse());
     };
         
     return (

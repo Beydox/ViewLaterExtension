@@ -1,9 +1,8 @@
 ### README.md
 
-# Chrome Extension Boilerplate
+# Chrome Extension Save Video Links
 
-A modern boilerplate for developing Chrome extensions using **React**, **TypeScript**, and **Material-UI (MUI)**. This project provides a strong foundation for building powerful and user-friendly Chrome extensions.
-
+Chrome extension on **React**, **TypeScript**, and **Material-UI (MUI)**. 
 ## Features
 
 - **React** for building interactive UIs.
@@ -26,7 +25,7 @@ Ensure you have the following installed:
 
 1. Clone this repository:
    ```bash
-   git clone https://github.com/Beydox/react-ts-mui-ext-boilerplate.git
+   git clone https://github.com/Beydox/
    
 
 2. Navigate to the project directory:
