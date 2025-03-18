@@ -1,8 +1,4 @@
 ### README.md
-
-# Chrome Extension ViewLater+
-
-### README.md
 # <img src="https://github.com/Beydox/ViewLaterExtension/blob/master/src/static/icon.png" height="75"/> ViewLater+ Extension
 ![Chrome](https://img.shields.io/badge/Chrome-Extension-red?logo=googlechrome)
 ![React](https://img.shields.io/badge/React-18.0+-blue?logo=react)
