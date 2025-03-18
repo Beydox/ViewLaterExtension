@@ -67,7 +67,7 @@ function Row(props: { row: rowProps; onRowsUpdate: () => void })  {
             </TableCell>
             <TableCell component="th" scope="row"  style={style}>
             <Tooltip title={row.name}>
-                <Typography onClick={handleLink} sx={{
+                <Typography variant='body1' onClick={handleLink} sx={{
                     "&:hover": {
                         cursor: 'pointer'
                     }

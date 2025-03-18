@@ -2,7 +2,12 @@
 
 # Chrome Extension Save Video Links
 
-Chrome extension on **React**, **TypeScript**, and **Material-UI (MUI)**. 
+### README.md
+# <img src="https://github.com/Beydox/ViewLaterExtension/blob/master/src/static/icon.png" height="75"/> QR-code generate Extension
+![Chrome](https://img.shields.io/badge/Chrome-Extension-red?logo=googlechrome)
+![React](https://img.shields.io/badge/React-18.0+-blue?logo=react)
+![TypeScript](https://img.shields.io/badge/TypeScript-4.0+-blue?logo=typescript)
+![React MUI](https://img.shields.io/badge/React%20MUI%206.4.4-turkuaz?logo=React%20MUI)
 ## Features
 
 - **React** for building interactive UIs.

@@ -1,10 +1,12 @@
 import React from "react"
 import { useState, useEffect } from "react";
-import { Card, CardContent, CardActions, Button, TextField } from "@mui/material";
+import { Card, CardContent, CardActions, Button, TextField, Alert } from "@mui/material";
 import PopupMenu from "./PopupMenu";
 import { useParams } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import { getItemById, updateItem } from "./db";
+import SaveIcon from '@mui/icons-material/Save';
+
 
 
 const Edit = () => {
@@ -61,20 +63,36 @@ const Edit = () => {
                     variant="outlined" 
                     value={urlPath}
                     onChange={handleUrlInputChange} 
-                    sx={{ mt: 2, width: 250 }} 
+                    sx={{ mt: 2, width: 320 }}
                 />
                 <TextField
                     id="outlined-multiline-static"
                     label="Multiline"
                     multiline
                     rows={4}
-                    sx={{ mt: 2, width: 250 }}
+                    sx={{ mt: 2, width: 320 }}
                     value={note}
                     onChange={handleNoteInputChange} 
                 />
                 </CardContent>
                 <CardActions>
-                    <Button size="small" onClick={handleUpdate}>Update</Button>
+                    <Button size="medium" 
+              sx={{ mt: -1, bgcolor: "firebrick", ml: 1, mb: 1 }}
+              variant="contained" endIcon={<SaveIcon />} 
+                    onClick={handleUpdate}>Update</Button>
+                    <Alert severity="success" color="warning" sx={{
+                        height: "33px", ml: 4, 
+                        width: "160px",
+                        lineHeight: "1",
+                        mb:2,
+                        pb: 0.5,
+                        pt: 0.5,
+                        display: "flex",
+                        overflow: "hidden",
+                        justifyContent: "center"
+                    }}>
+                        Updates are saved!
+                    </Alert>
                 </CardActions>
             </Card>
             <p>{message}</p>
