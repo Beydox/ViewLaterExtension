@@ -1,9 +1,9 @@
 ### README.md
 
-# Chrome Extension Save Video Links
+# Chrome Extension ViewLater+
 
 ### README.md
-# <img src="https://github.com/Beydox/ViewLaterExtension/blob/master/src/static/icon.png" height="75"/> QR-code generate Extension
+# <img src="https://github.com/Beydox/ViewLaterExtension/blob/master/src/static/icon.png" height="75"/> ViewLater+ Extension
 ![Chrome](https://img.shields.io/badge/Chrome-Extension-red?logo=googlechrome)
 ![React](https://img.shields.io/badge/React-18.0+-blue?logo=react)
 ![TypeScript](https://img.shields.io/badge/TypeScript-4.0+-blue?logo=typescript)
@@ -30,12 +30,12 @@ Ensure you have the following installed:
 
 1. Clone this repository:
    ```bash
-   git clone https://github.com/Beydox/
+   git clone https://github.com/Beydox/ViewLaterExtension
    
 
 2. Navigate to the project directory:
    ```bash
-   cd react-ts-mui-ext-boilerplate
+   cd ViewLaterExtension
    ```
 
 3. Install dependencies:
