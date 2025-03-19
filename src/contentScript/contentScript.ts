@@ -1,1 +1,0 @@
-console.log("React ts mui boilerplate 'Hello world!' contentScript.js message")
